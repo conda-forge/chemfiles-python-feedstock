@@ -22,12 +22,12 @@ requirements:
   build:
     - python
     - setuptools
-    - enum34  # [py<34]
+    - enum34  # [py2k]
     - numpy
     - chemfiles-lib ==0.6.2
   run:
     - python
-    - enum34  # [py<34]
+    - enum34  # [py2k]
     - numpy
     - chemfiles-lib ==0.6.2
 
