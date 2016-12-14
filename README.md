@@ -11,6 +11,18 @@ Summary: Python binding to chemfiles, a modern library for chemistry file readin
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/chemfiles-python-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/chemfiles-python-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/chemfiles-python-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/chemfiles-python-feedstock)
+Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/chemfiles-python/badges/version.svg)](https://anaconda.org/conda-forge/chemfiles-python)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/chemfiles-python/badges/downloads.svg)](https://anaconda.org/conda-forge/chemfiles-python)
+
 Installing chemfiles-python
 ===========================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `chemfiles-python` available on yo
 ```
 conda search chemfiles-python --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/chemfiles-python-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/chemfiles-python-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/chemfiles-python-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/chemfiles-python-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/chemfiles-python/badges/version.svg)](https://anaconda.org/conda-forge/chemfiles-python)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/chemfiles-python/badges/downloads.svg)](https://anaconda.org/conda-forge/chemfiles-python)
 
 
 Updating chemfiles-python-feedstock
