@@ -1,5 +1,5 @@
-{% set version = "0.6.0" %}
-{% set sha256 = "913a9ca911287e342918458619c29dfd094f4b25f7d6866048b9968fc63be207" %}
+{% set version = "0.7.1" %}
+{% set sha256 = "133ae64110f049fcfd2ef5014e3126f28528f63c8f47a211cc57a936f6efc39e" %}
 
 package:
   name: chemfiles-python
@@ -9,31 +9,35 @@ source:
   fn: chemfiles.py-{{ version }}.tar.gz
   url: https://github.com/chemfiles/chemfiles.py/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-      - find_library.patch
 
 build:
   skip: true  # [win]
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  script:
+      - mkdir build
+      - cd build
+      - cmake -DCMAKE_INSTALL_PREFIX=$PREFIX ..
+      - cmake --build . --config release --target install
+      # Run tests
+      - ctest
 
 requirements:
   build:
     - python
+    - cmake
     - setuptools
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib ==0.6.2
+    - chemfiles-lib ==0.7.1
   run:
     - python
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib ==0.6.2
+    - chemfiles-lib ==0.7.1
 
 test:
-  commands:
-    - cd $SRC_DIR/tests
-    - python -m unittest discover
+  import:
+    - chemfiles
 
 about:
   home: http://chemfiles.github.io
