@@ -1,5 +1,5 @@
-{% set version = "0.7.1" %}
-{% set sha256 = "133ae64110f049fcfd2ef5014e3126f28528f63c8f47a211cc57a936f6efc39e" %}
+{% set version = "0.7.2" %}
+{% set sha256 = "60a1efdb10ae78218db0afeb500c80324c8f60e1e298573d5b8ba795025f17ef" %}
 
 package:
   name: chemfiles-python
@@ -28,12 +28,12 @@ requirements:
     - setuptools
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib ==0.7.1
+    - chemfiles-lib 0.7.*
   run:
     - python
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib ==0.7.1
+    - chemfiles-lib 0.7.*
 
 test:
   import:
