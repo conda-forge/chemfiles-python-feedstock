@@ -1,5 +1,5 @@
-{% set version = "0.7.2" %}
-{% set sha256 = "60a1efdb10ae78218db0afeb500c80324c8f60e1e298573d5b8ba795025f17ef" %}
+{% set version = "0.7.4" %}
+{% set sha256 = "69f209082b495eafac5643ea1d6ab0c6732088b0e5ec43b7963a5fe057aa9da5" %}
 
 package:
   name: chemfiles-python
@@ -11,15 +11,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  skip: true  # [win]
+  skip: true  # [win and py2k]
   number: 0
-  script:
-      - mkdir build
-      - cd build
-      - cmake -DCMAKE_INSTALL_PREFIX=$PREFIX ..
-      - cmake --build . --config release --target install
-      # Run tests
-      - ctest
 
 requirements:
   build:
@@ -40,11 +33,11 @@ test:
     - chemfiles
 
 about:
-  home: http://chemfiles.github.io
+  home: http://chemfiles.org
   license: MPL-v2.0
   license_file: LICENCE.txt
   summary: Python binding to chemfiles, a modern library for chemistry file reading and writing
-  doc_url: http://chemfiles.github.io/chemfiles.py/latest/
+  doc_url: http://chemfiles.org/chemfiles.py/latest/
   dev_url: https://github.com/chemfiles/chemfiles.py
 
 extra:
