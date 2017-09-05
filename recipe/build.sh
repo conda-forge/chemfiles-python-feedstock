@@ -1,3 +1,5 @@
+set -eu
+
 mkdir build
 cd build
 
