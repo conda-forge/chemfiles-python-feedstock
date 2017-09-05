@@ -1,7 +1,7 @@
 About chemfiles-python
 ======================
 
-Home: http://chemfiles.github.io
+Home: http://chemfiles.org
 
 Package license: MPL-v2.0
 
@@ -16,7 +16,7 @@ Current build status
 
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/chemfiles-python-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/chemfiles-python-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/chemfiles-python-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/chemfiles-python-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/chemfiles-python-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/chemfiles-python-feedstock/branch/master)
 
 Current release info
 ====================
