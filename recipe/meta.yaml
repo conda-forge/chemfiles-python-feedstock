@@ -1,5 +1,5 @@
-{% set version = "0.7.4" %}
-{% set sha256 = "69f209082b495eafac5643ea1d6ab0c6732088b0e5ec43b7963a5fe057aa9da5" %}
+{% set version = "e4b085f5797478b1f1960fa01f1d560c044a1e5d" %}
+{% set sha256 = "bf498f5494957c829b4811c476e6f342efc6a46a040ae928a5867b6759004a63" %}
 
 package:
   name: chemfiles-python
@@ -9,35 +9,38 @@ source:
   fn: chemfiles.py-{{ version }}.tar.gz
   url: https://github.com/chemfiles/chemfiles.py/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - install-no-prefix.patch  # [win]
 
 build:
   skip: true  # [win and py2k]
   number: 0
+  script: python setup.py install
 
 requirements:
   build:
-    - python
+    # Build time dependencies
     - cmake
-    - setuptools
+    - scikit-build
+    - wheel 0.29.0
+    # Run time dependencies
+    - python
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib 0.7.*
+    - chemfiles-lib 0.8.*
   run:
     - python
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib 0.7.*
+    - chemfiles-lib 0.8.*
 
 test:
-  import:
-    - chemfiles
+  source_files:
+    - tests/
+  commands:
+    - python -m unittest discover -p "*.py" tests
 
 about:
   home: http://chemfiles.org
-  license: MPL-v2.0
-  license_file: LICENCE.txt
+  license: BSD-3-Clause
   summary: Python binding to chemfiles, a modern library for chemistry file reading and writing
   doc_url: http://chemfiles.org/chemfiles.py/latest/
   dev_url: https://github.com/chemfiles/chemfiles.py
