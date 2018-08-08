@@ -12,13 +12,14 @@ source:
 
 build:
   skip: true  # [win and py2k]
-  number: 0
+  number: 1
   script: python setup.py install
 
 requirements:
+    build:
+    - cmake
   build:
     # Build time dependencies
-    - cmake
     - scikit-build
     - wheel 0.29.0
     # Run time dependencies
