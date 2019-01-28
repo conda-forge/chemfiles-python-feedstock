@@ -1,5 +1,5 @@
-{% set version = "0.8.0" %}
-{% set sha256 = "eccd3fc454ed40a1060d2365e179f89cc348ce131fbd2ee8e280246490c2f7eb" %}
+{% set version = "0.9.0" %}
+{% set sha256 = "021af0bd9078aaf4082ab0ca7ac834cb026057cff3757c30821d6e3045352ef4" %}
 
 package:
   name: chemfiles-python
