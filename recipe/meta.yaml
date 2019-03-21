@@ -15,12 +15,14 @@ source:
 build:
   skip: true  # [win and py2k]
   number: 0
-  script: python setup.py install -G "Unix Makefiles" --skip-generator-test
+  script: >
+    {{ PYTHON }} -m pip install . --no-deps -vv --install-option="--generator=Ninja" --install-option="--skip-generator-test"
 
 requirements:
   build:
     # Build time dependencies
     - cmake
+    - pip
     - scikit-build
     - wheel
     # Run time dependencies
