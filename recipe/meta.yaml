@@ -9,28 +9,30 @@ source:
   fn: chemfiles.py-{{ version }}.tar.gz
   url: https://github.com/chemfiles/chemfiles.py/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - cmake.patch
 
 build:
   skip: true  # [win and py2k]
   number: 0
-  script: python setup.py install
+  script: python setup.py install -G "Unix Makefiles" --skip-generator-test
 
 requirements:
   build:
     # Build time dependencies
     - cmake
     - scikit-build
-    - wheel 0.29.0
+    - wheel
     # Run time dependencies
     - python
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib 0.8.*
+    - chemfiles-lib 0.9.*
   run:
     - python
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib 0.8.*
+    - chemfiles-lib 0.9.*
 
 test:
   source_files:
