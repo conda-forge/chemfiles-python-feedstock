@@ -1,5 +1,5 @@
-{% set version = "0.9.1" %}
-{% set sha256 = "90ed58776b6ff6470120fe0faa8473d565745f8fd4db56ed17814077767c703a" %}
+{% set version = "0.9.3" %}
+{% set sha256 = "49db7fe2a278124a52ecfb7e7cf5e28f9dd4dd4a1b89c06cf9829b53ef3bbef3" %}
 
 package:
   name: chemfiles-python
@@ -9,8 +9,6 @@ source:
   fn: chemfiles.py-{{ version }}.tar.gz
   url: https://github.com/chemfiles/chemfiles.py/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - cmake.patch
 
 build:
   skip: true  # [win and py2k]
@@ -39,12 +37,14 @@ requirements:
 test:
   source_files:
     - tests/
+    - examples/
   commands:
     - python -m unittest discover -p "*.py" tests
 
 about:
   home: http://chemfiles.org
   license: BSD-3-Clause
+  license_file: LICENSE
   summary: Python binding to chemfiles, a modern library for chemistry file reading and writing
   doc_url: http://chemfiles.org/chemfiles.py/latest/
   dev_url: https://github.com/chemfiles/chemfiles.py
