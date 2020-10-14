@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [win and py2k]
-  number: 0
+  number: 1
   script: >
     {{ PYTHON }} -m pip install . --no-deps -vv --install-option="--generator=Ninja" --install-option="--skip-generator-test"
 
