@@ -1,5 +1,5 @@
-{% set version = "0.9.3" %}
-{% set sha256 = "49db7fe2a278124a52ecfb7e7cf5e28f9dd4dd4a1b89c06cf9829b53ef3bbef3" %}
+{% set version = "0.10.0" %}
+{% set sha256 = "b4438692d69a0e325157ff0b0ca441ae9b790a2b3104d92cd5b30920cd07fabe" %}
 
 package:
   name: chemfiles-python
@@ -12,12 +12,12 @@ source:
 
 build:
   skip: true  # [win and py2k]
-  number: 2
+  number: 0
   script: >
     {{ PYTHON }} -m pip install . --no-deps -vv --install-option="--generator=Ninja" --install-option="--skip-generator-test"
 
 requirements:
-  build:
+  host:
     # Build time dependencies
     - cmake
     - pip
