@@ -3,7 +3,7 @@ About chemfiles-python
 
 Home: http://chemfiles.org
 
-Package license: BSD-3-Clause
+Package license: BSD
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/chemfiles-python-feedstock/blob/master/LICENSE.txt)
 
