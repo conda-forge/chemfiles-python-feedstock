@@ -9,8 +9,6 @@ source:
   fn: chemfiles.py-{{ version }}.tar.gz
   url: https://github.com/chemfiles/chemfiles.py/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - cmake.patch
 
 build:
   skip: true  # [(win and py2k) or (python_impl == 'pypy')]
