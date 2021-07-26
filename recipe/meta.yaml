@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [(win and py2k) or (python_impl == 'pypy')]
-  number: 0
+  number: 1
   script: >
     {{ PYTHON }} setup.py install --generator=Ninja --skip-generator-test
 
@@ -26,12 +26,12 @@ requirements:
     - wheel
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib 0.10.*
+    - chemfiles-lib >=0.10.1,<0.11
   run:
     - python
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib 0.10.*
+    - chemfiles-lib >=0.10.1,<0.11
 
 test:
   source_files:
