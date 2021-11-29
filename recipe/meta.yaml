@@ -1,5 +1,5 @@
-{% set version = "0.10.1" %}
-{% set sha256 = "32cee8caa9a626340e3a4b74aa7e50559cf06fae80d052dbb8bd223b47cbee63" %}
+{% set version = "0.10.2" %}
+{% set sha256 = "a94e7fb9bae7f0b1658b9b3daab576cf98ea86779ad812abe9e70f49ee0cec48" %}
 
 package:
   name: chemfiles-python
@@ -12,7 +12,7 @@ source:
 
 build:
   skip: true  # [(win and py2k) or (python_impl == 'pypy')]
-  number: 1
+  number: 0
   script: >
     {{ PYTHON }} setup.py install --generator=Ninja --skip-generator-test
 
@@ -26,12 +26,12 @@ requirements:
     - wheel
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib >=0.10.1,<0.11
+    - chemfiles-lib >=0.10.2,<0.11
   run:
     - python
     - enum34  # [py2k]
     - numpy
-    - chemfiles-lib >=0.10.1,<0.11
+    - chemfiles-lib >=0.10.2,<0.11
 
 test:
   source_files:
