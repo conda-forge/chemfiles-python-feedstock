@@ -23,9 +23,7 @@ requirements:
     - cmake
   host:
     - python
-    - pip
     - scikit-build
-    - wheel
     - enum34  # [py2k]
     - numpy
     - chemfiles-lib >=0.10.2,<0.11
