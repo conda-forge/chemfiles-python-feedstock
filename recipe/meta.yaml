@@ -13,7 +13,7 @@ source:
     - soname-on-windows.patch
 
 build:
-  skip: true  # [(win and py2k) or (python_impl == 'pypy')]
+  skip: true  # [(win and py2k)
   number: 1
   script: >
     {{ PYTHON }} setup.py install --generator=Ninja --skip-generator-test
