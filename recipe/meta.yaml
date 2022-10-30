@@ -15,7 +15,7 @@ source:
     - generate-external-py.patch
 
 build:
-  number: 0
+  number: 1
   script: |
     {{ PYTHON }} setup.py install
 
