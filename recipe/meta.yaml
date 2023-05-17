@@ -1,5 +1,5 @@
-{% set version = "0.10.3" %}
-{% set sha256 = "0e12837a332e6c1c950e82e339b17cd8fbf29a28bae8399a664b818c056786a9" %}
+{% set version = "0.10.4" %}
+{% set sha256 = "ad56924c0c24f1ec18b0da2928cb938f9a6e8d3e8678242929a57d096b94d15b" %}
 
 package:
   name: chemfiles-python
@@ -15,7 +15,7 @@ source:
     - generate-external-py.patch
 
 build:
-  number: 1
+  number: 0
   script: |
     {{ PYTHON }} setup.py install
 
