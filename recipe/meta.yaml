@@ -28,6 +28,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - numpy >=1.21
     - chemfiles-lib ==0.10.4
   run:
