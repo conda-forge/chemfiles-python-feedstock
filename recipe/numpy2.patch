@@ -1,0 +1,25 @@
+diff --git a/src/chemfiles/residue.py b/src/chemfiles/residue.py
+index 75ff1dc..869a6c6 100644
+--- a/src/chemfiles/residue.py
++++ b/src/chemfiles/residue.py
+@@ -55,7 +55,7 @@ class ResidueAtoms(object):
+             yield self[i]
+ 
+     def __repr__(self):
+-        return "[" + ", ".join([i.__repr__() for i in self]) + "]"
++        return "[" + ", ".join([str(int(i)) for i in self]) + "]"
+ 
+     def append(self, atom):
+         """Add the atom index ``atom`` in the :py:class:`Residue`."""
+diff --git a/tests/residue.py b/tests/residue.py
+index 57ff8fe..8595c32 100644
+--- a/tests/residue.py
++++ b/tests/residue.py
+@@ -1,7 +1,6 @@
+ import copy
+ import unittest
+ 
+-import numpy as np
+ from _utils import remove_warnings
+ 
+ from chemfiles import ChemfilesError, Residue
