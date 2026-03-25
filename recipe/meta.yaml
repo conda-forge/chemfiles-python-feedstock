@@ -10,7 +10,7 @@ source:
   url: https://github.com/chemfiles/chemfiles.py/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - use-ninja.patch
+    - cmake.patch
     - numpy2.patch
 
 build:
