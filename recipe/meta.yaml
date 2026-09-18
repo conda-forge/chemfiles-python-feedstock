@@ -29,7 +29,7 @@ requirements:
     - python
     - pip
     - setuptools
-    - numpy >=1.21
+    - numpy
     - chemfiles-lib ==0.10.4
   run:
     - python
